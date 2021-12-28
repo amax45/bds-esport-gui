@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.but.feec</groupId>
-    <artifactId>bds-e-sport-gui</artifactId>
+    <artifactId>bds-esport-gui</artifactId>
     <version>1.0.0</version>
 
     <properties>

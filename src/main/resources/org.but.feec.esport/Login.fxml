@@ -13,17 +13,17 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox fx:id="fpga" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.feec.esport.controller.LoginController">
+<VBox fx:id="fpga" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.but.feec.esport.controllers.LoginController">
     <children>
         <HBox>
             <VBox.margin>
                 <Insets top="10.0" />
             </VBox.margin>
         </HBox>
-        <Pane prefHeight="363.0" prefWidth="600.0">
+        <Pane prefHeight="360.0" prefWidth="600.0">
             <children>
-                <Label fx:id="vutLogo" layoutX="200.0" layoutY="95.0" prefHeight="17.0" prefWidth="62.0" />
-                <Label layoutX="75.0" layoutY="40.0" text="Welcome to BDS JavaFX Demo">
+                <Label fx:id="mainLogo" layoutX="180" layoutY="70" prefHeight="80.0" prefWidth="340.0" />
+                <Label layoutX="95.0" layoutY="40.0" text="Welcome to LoL e-sport database">
                     <font>
                         <Font size="26.0" />
                     </font>
