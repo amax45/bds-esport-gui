@@ -25,36 +25,36 @@
             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <Label text="email">
+            <Label text="Email">
                <padding>
                   <Insets left="5.0" />
                </padding>
             </Label>
-            <Label text="first name" GridPane.rowIndex="1">
+            <Label text="First name" GridPane.rowIndex="1">
                <padding>
                   <Insets left="5.0" />
                </padding>
             </Label>
-            <Label text="last name" GridPane.rowIndex="2">
+            <Label text="Last name" GridPane.rowIndex="2">
                <padding>
                   <Insets left="5.0" />
                </padding>
             </Label>
-            <Label text="password" GridPane.rowIndex="3">
+            <Label text="Password" GridPane.rowIndex="3">
                <padding>
                   <Insets left="5.0" />
                </padding>
             </Label>
-            <Label text="nickname" GridPane.rowIndex="4">
+            <Label text="Nickname" GridPane.rowIndex="4">
                <padding>
                   <Insets left="5.0" />
                </padding>
             </Label>
-            <TextField fx:id="newAdminEmail" promptText="type new person email" GridPane.columnIndex="1" />
-            <TextField fx:id="newAdminGivenName" promptText="type new person first name" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-            <TextField fx:id="newAdminFamilyName" promptText="type new person last name" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-            <TextField fx:id="newAdminPassword" promptText="type new person password" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-            <TextField fx:id="newAdminNickname" promptText="type new person nickname" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <TextField fx:id="newAdminEmail" promptText="type new admin email" GridPane.columnIndex="1" />
+            <TextField fx:id="newAdminGivenName" promptText="type new admin first name" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="newAdminFamilyName" promptText="type new admin last name" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextField fx:id="newAdminPassword" promptText="type new admin password" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <TextField fx:id="newAdminNickname" promptText="type new admin nickname" GridPane.columnIndex="1" GridPane.rowIndex="4" />
          </children>
       </GridPane>
       <Button fx:id="newAdminCreateAdmin" layoutX="501.0" layoutY="349.0" mnemonicParsing="false" onAction="#handleCreateNewAdmin" text="create" />
