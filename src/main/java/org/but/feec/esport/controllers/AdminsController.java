@@ -1,8 +1,11 @@
 package org.but.feec.esport.controllers;
 
+import javafx.animation.KeyFrame;
+import javafx.animation.Timeline;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -12,6 +15,8 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseButton;
 import javafx.stage.Stage;
+import javafx.util.Duration;
+
 import org.but.feec.esport.api.AdminBasicView;
 import org.but.feec.esport.api.AdminDetailView;
 import org.but.feec.esport.data.AdminRepository;
@@ -22,8 +27,10 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
+import java.sql.SQLException;
 import java.sql.Timestamp;
 import java.util.List;
+import java.util.Optional;
 
 public class AdminsController {
 
@@ -89,6 +96,7 @@ public class AdminsController {
     private void initializeTableViewSelection() {
         MenuItem edit = new MenuItem("Edit admin");
         MenuItem detailedView = new MenuItem("Detailed admin view");
+        MenuItem delete = new MenuItem("Delete admin");
 
         systemAdminsTableView.setRowFactory(tv -> {
             TableRow<AdminBasicView> row = new TableRow<>();
@@ -153,10 +161,20 @@ public class AdminsController {
             }
         });
 
+        delete.setOnAction((ActionEvent event) -> {
+            AdminBasicView adminView = systemAdminsTableView.getSelectionModel().getSelectedItem();
+            try {
+                adminRepository.deleteAdmin(adminView);
+            } catch (SQLException ex) {
+                ExceptionHandler.handleException(ex);
+            }
+            adminDeletedConfirmationDialog();
+        });
 
         ContextMenu menu = new ContextMenu();
         menu.getItems().add(edit);
         menu.getItems().addAll(detailedView);
+        menu.getItems().addAll(delete);
         systemAdminsTableView.setContextMenu(menu);
     }
 
@@ -210,8 +228,36 @@ public class AdminsController {
 
         systemAdminsTable3View.setItems(FXCollections.observableArrayList(item.getTime_of_match()));
 
-        //systemAdminsTable3View.setCellFactory();
+/*        systemAdminsTable3View.setCellFactory();
+        systemAdminsTable3www.google.com/search?q=how+to+add+observaView.setCellFactory(new Callback<AdminBasicView<String>, javafx.scene.control.ListCell<String>>()
+        {
+            @Override
+            public ListCell<String> call(AdminBasicView<String> systemAdminsTable3View)
+            {
+                return new systemAdminsTable3ViewCell();
+            }
+        });
+*/
+
+
         System.out.println(item.getTime_of_match());
+    }
+
+    private void adminDeletedConfirmationDialog() {
+        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+        alert.setTitle("Admin Deleted Confirmation");
+        alert.setHeaderText("Your admin was successfully deleted.");
+
+        Timeline idlestage = new Timeline(new KeyFrame(Duration.seconds(3), new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                alert.setResult(ButtonType.CANCEL);
+                alert.hide();
+            }
+        }));
+        idlestage.setCycleCount(1);
+        idlestage.play();
+        Optional<ButtonType> result = alert.showAndWait();
     }
 
 }

@@ -40,7 +40,7 @@
                   <Insets left="5.0" />
                </padding>
             </Label>
-            <Label text="pwd" GridPane.rowIndex="3">
+            <Label text="password" GridPane.rowIndex="3">
                <padding>
                   <Insets left="5.0" />
                </padding>

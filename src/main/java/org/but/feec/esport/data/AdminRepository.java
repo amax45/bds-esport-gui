@@ -29,7 +29,6 @@ public class AdminRepository {
     }
 
 
-    // JAK ULOZIT DATE TIME ?? JAVA FX StringProperty? AdminDetailView
     public AdminDetailView findAdminDetailedView(Long adminId) {
         try (Connection connection = DataSourceConfig.getConnection();
              PreparedStatement preparedStatement = connection.prepareStatement(
@@ -78,7 +77,7 @@ public class AdminRepository {
     }
 
     public void createAdmin(AdminCreateView adminCreateView) {
-        String insertAdminSQL = "INSERT INTO admin.admin (nickname, email, password, given_name, family_name) VALUES (?,?,?,?,?)";
+        String insertAdminSQL = "INSERT INTO admin.admin (email, given_name, nickname, password, family_name) VALUES (?,?,?,?,?)";
         try (Connection connection = DataSourceConfig.getConnection();
              // would be beneficial if I will return the created entity back
              PreparedStatement preparedStatement = connection.prepareStatement(insertAdminSQL, Statement.RETURN_GENERATED_KEYS)) {
@@ -137,6 +136,17 @@ public class AdminRepository {
         }
     }
 
+    public void deleteAdmin(AdminBasicView adminBasicView) throws SQLException {
+        String delete = "DELETE FROM admin.admin WHERE admin_id = ?";
+        try (Connection connection = DataSourceConfig.getConnection();
+             PreparedStatement preparedStatement = connection.prepareStatement(delete, Statement.RETURN_GENERATED_KEYS)) {
+            preparedStatement.setLong(1, adminBasicView.getId());
+            preparedStatement.execute();
+        }
+        catch (SQLException e) {
+            throw new DataAccessException("Deleting admin failed.");
+        }
+    }
 
     private AdminAuthView mapToAdminAuth(ResultSet rs) throws SQLException {
         AdminAuthView admin = new AdminAuthView();

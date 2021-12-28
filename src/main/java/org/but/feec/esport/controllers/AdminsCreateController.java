@@ -27,7 +27,7 @@ public class AdminsCreateController {
     private static final Logger logger = LoggerFactory.getLogger(AdminsCreateController.class);
 
     @FXML
-    public Button newAdminCreatePerson;
+    public Button newAdminCreateAdmin;
     @FXML
     private TextField newAdminEmail;
 
@@ -59,7 +59,7 @@ public class AdminsCreateController {
         validation.registerValidator(newAdminNickname, Validator.createEmptyValidator("The nickname must not be empty."));
         validation.registerValidator(newAdminPassword, Validator.createEmptyValidator("The password must not be empty."));
 
-        newAdminCreatePerson.disableProperty().bind(validation.invalidProperty());
+        newAdminCreateAdmin.disableProperty().bind(validation.invalidProperty());
 
         logger.info("AdminCreateController initialized");
     }

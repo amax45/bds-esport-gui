@@ -13,6 +13,7 @@ org\but\feec\esport\controllers\AdminsEditController.class
 org\but\feec\esport\controllers\AdminsDetailViewController.class
 org\but\feec\esport\controllers\LoginController$1.class
 org\but\feec\esport\App.class
+org\but\feec\esport\controllers\AdminsController$1.class
 org\but\feec\esport\api\AdminBasicView.class
 org\but\feec\esport\controllers\AdminsController.class
 org\but\feec\esport\data\AdminRepository.class
