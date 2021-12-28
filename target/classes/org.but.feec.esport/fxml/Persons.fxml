@@ -34,9 +34,9 @@
         </Menu>
       </menus>
     </MenuBar>
-    <SplitPane dividerPositions="0.14715048975957254, 0.7782724844167408" focusTraversable="true" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
+    <SplitPane dividerPositions="0.14715048975957254" focusTraversable="true" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
       <items>
-        <AnchorPane>
+        <AnchorPane prefHeight="515.0" prefWidth="206.0">
           <children>
             <Label alignment="CENTER" layoutX="14.0" layoutY="14.0" minWidth="60.0" prefWidth="-1.0" style="&#10;" text="Admin matches" textAlignment="CENTER" wrapText="false">
               <font>
@@ -47,30 +47,29 @@
               </textFill>
 
             </Label>
-                  <TableView fx:id="systemAdminsTable3View" layoutY="168.0" prefHeight="200.0" prefWidth="169.0">
+                  <TableView fx:id="systemAdminsTable3View" layoutY="168.0" prefHeight="200.0" prefWidth="286.0">
                     <columns>
-                      <TableColumn fx:id="adminsTimeOfMatch" minWidth="75.0" prefWidth="80.00000303983688" text="Time of Match" />
-
+                      <TableColumn fx:id="adminsTimeOfMatch" minWidth="75.0" prefWidth="193.0" text="Time of Match" />
                     </columns>
                   </TableView>
           </children>
         </AnchorPane>
         <ScrollPane prefHeight="-1.0" prefWidth="-1.0">
           <content>
-            <AnchorPane id="Content" maxWidth="1.7976931348623157E308" minHeight="-1.0" minWidth="-Infinity" prefHeight="517.0" prefWidth="592.0">
+            <AnchorPane id="Content" maxWidth="1.7976931348623157E308" minHeight="-1.0" minWidth="-Infinity" prefHeight="515.0" prefWidth="655.0">
               <children>
-                <Label alignment="CENTER" font="$x1" layoutX="14.0" layoutY="14.0" prefHeight="27.0" prefWidth="147.0" style="&#10;" text="Admins" textAlignment="CENTER" textFill="$x2" wrapText="false" />
-                        <TableView fx:id="systemAdminsTableView" layoutY="67.0" maxWidth="1.7976931348623157E308" minWidth="-Infinity" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                <Label alignment="CENTER" font="$x1" layoutX="24.0" layoutY="14.0" prefHeight="27.0" prefWidth="147.0" style="&#10;" text="Admins" textAlignment="CENTER" textFill="$x2" wrapText="false" />
+                        <TableView fx:id="systemAdminsTableView" layoutY="58.0" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefHeight="400.0" prefWidth="603.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
                           <columns>
                               <TableColumn fx:id="adminsId" minWidth="75.0" prefWidth="80.00000303983688" text="id" />
-                              <TableColumn fx:id="adminsEmail" minWidth="75.0" prefWidth="160.00001525878906" text="email" />
-                              <TableColumn fx:id="adminsGivenName" minWidth="75.0" prefWidth="120.0" text="given name" />
-                              <TableColumn fx:id="adminsFamilyName" minWidth="75.0" prefWidth="120.0" text="family name" />
-                              <TableColumn fx:id="adminsNickname" minWidth="75.0" prefWidth="120.0" text="nickname" />
+                              <TableColumn fx:id="adminsEmail" minWidth="75.0" prefWidth="184.0" text="email" />
+                              <TableColumn fx:id="adminsGivenName" minWidth="75.0" prefWidth="126.0" text="given name" />
+                              <TableColumn fx:id="adminsFamilyName" minWidth="75.0" prefWidth="121.0" text="family name" />
+                              <TableColumn fx:id="adminsNickname" minWidth="75.0" prefWidth="141.0" text="nickname" />
                           </columns>
                         </TableView>
-                        <Button fx:id="addPersonButton" layoutX="24.0" layoutY="491.0" mnemonicParsing="false" onAction="#handleAddPersonButton" text="Add person" />
-                        <Button fx:id="refreshButton" layoutX="127.0" layoutY="491.0" mnemonicParsing="false" onAction="#handleRefreshButton" text="Refresh" />
+                        <Button fx:id="addPersonButton" layoutX="39.0" layoutY="478.0" mnemonicParsing="false" onAction="#handleAddPersonButton" text="Add person" />
+                        <Button fx:id="refreshButton" layoutX="133.0" layoutY="478.0" mnemonicParsing="false" onAction="#handleRefreshButton" text="Refresh" />
               </children>
             </AnchorPane>
           </content>
