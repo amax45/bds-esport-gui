@@ -1,5 +1,7 @@
 package org.but.feec.esport.api;
 
+import java.sql.Timestamp;
+
 import javafx.beans.property.LongProperty;
 import javafx.beans.property.SimpleLongProperty;
 import javafx.beans.property.SimpleStringProperty;
@@ -12,7 +14,19 @@ public class AdminDetailView {
     private StringProperty givenName = new SimpleStringProperty();
     private StringProperty familyName = new SimpleStringProperty();
     private StringProperty nickname = new SimpleStringProperty();
+    private StringProperty  matchTime = new SimpleStringProperty();
 
+    public String getMatchTime() {
+        return matchTime.get();
+    }
+
+    public StringProperty matchTimeProperty() {
+        return matchTime;
+    }
+
+    public void setMatchTime(String matchTime) {
+        this.matchTime.set(matchTime);
+    }
 
     public Long getId() {
         return idProperty().get();

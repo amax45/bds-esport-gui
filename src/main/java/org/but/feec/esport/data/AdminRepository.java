@@ -33,7 +33,7 @@ public class AdminRepository {
         try (Connection connection = DataSourceConfig.getConnection();
              PreparedStatement preparedStatement = connection.prepareStatement(
                      "SELECT admin_id, nickname, given_name, family_name, email" +
-                             " FROM admin.admin " +
+                             " FROM admin.admin " + // "INNER JOIN admin.match m ON a.admin_id=m.admin_id"+
                       "WHERE admin.admin_id = ?"
              )
         ) {

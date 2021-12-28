@@ -49,7 +49,7 @@
             </Label>
                   <TableView fx:id="systemAdminsTable3View" layoutY="168.0" prefHeight="200.0" prefWidth="286.0">
                     <columns>
-                      <TableColumn fx:id="adminsTimeOfMatch" minWidth="75.0" prefWidth="193.0" text="Time of Match" />
+                      <TableColumn fx:id="adminsTimeOfMatch" minWidth="75.0" prefWidth="285.0" text="Time of Match" />
                     </columns>
                   </TableView>
           </children>

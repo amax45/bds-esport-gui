@@ -229,7 +229,7 @@ public class AdminsController {
         systemAdminsTable3View.setItems(FXCollections.observableArrayList(item.getTime_of_match()));
 
 /*        systemAdminsTable3View.setCellFactory();
-        systemAdminsTable3www.google.com/search?q=how+to+add+observaView.setCellFactory(new Callback<AdminBasicView<String>, javafx.scene.control.ListCell<String>>()
+        systemAdminsTable3View.setCellFactory(new Callback<AdminBasicView<String>, javafx.scene.control.ListCell<String>>()
         {
             @Override
             public ListCell<String> call(AdminBasicView<String> systemAdminsTable3View)
@@ -238,8 +238,6 @@ public class AdminsController {
             }
         });
 */
-
-
         System.out.println(item.getTime_of_match());
     }
 

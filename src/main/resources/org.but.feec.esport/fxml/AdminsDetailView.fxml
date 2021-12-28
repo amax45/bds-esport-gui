@@ -57,7 +57,6 @@
                 <TextField fx:id="givenNameTextField" GridPane.columnIndex="1" GridPane.rowIndex="2" />
                 <TextField fx:id="familyNameTextField" GridPane.columnIndex="1" GridPane.rowIndex="3" />
                 <TextField fx:id="nicknameTextField" GridPane.columnIndex="1" GridPane.rowIndex="4" />
-
             </children>
         </GridPane>
     </children>

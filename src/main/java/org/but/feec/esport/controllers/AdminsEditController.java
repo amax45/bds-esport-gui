@@ -39,6 +39,9 @@ public class AdminsEditController {
     private TextField familyNameTextField;
     @FXML
     private TextField nicknameTextField;
+    @FXML
+    private TextField matchTextField;
+
 
     private AdminService admineService;
     private AdminRepository adminRepository;
