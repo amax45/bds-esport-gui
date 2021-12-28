@@ -4,8 +4,8 @@ SET PG_BIN="C:\Program Files\PostgreSQL\14\bin\pg_dump.exe"
 SET PG_HOST=localhost
 SET PG_PORT=5432
 SET PG_DATABASE=DB
-SET PG_USER=postgres
-SET PG_PASSWORD=neznamho
+SET PG_USER=uzivatel
+SET PG_PASSWORD=heslo123
 SET PG_PATH=D:\Dokumenty
 SET FECHAYHORA=%date:/=%-%time:-0,8%
 SET FECHAYHORA=%FECHAYHORA::=-%
