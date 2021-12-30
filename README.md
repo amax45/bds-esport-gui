@@ -8,7 +8,7 @@ This is final part of school project from subject BPC-BDS (Database Security) at
 1. Start PGAdmin <br>
 2. Create database named DB  <br>
 3. Right click on DB and select Restore  <br>
-4. Choose file "BackupDB.sql"  <br>
+4. Choose file "BackupDB"  <br>
 5. Click "Okay" <br>
 
 <h2>Implementation</h2>
